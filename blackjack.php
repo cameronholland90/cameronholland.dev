@@ -80,6 +80,7 @@ if (!isset($_POST['stay'])) {
 								<li><a href="blackjack.php">Blackjack</a></li>
 								<li><a href="connect-four.php">Connect Four</a></li>
 								<li><a href="whack-a-mole.html">Whack-A-Mole</a></li>
+								<li><a href="simon-says.html">Hypnotoad Says</a></li>
 							</ul>
 						</li>
 					</ul>
