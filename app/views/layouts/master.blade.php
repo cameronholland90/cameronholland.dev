@@ -47,7 +47,8 @@
 								<li><a href="/yahtzee.php">Yahtzee</a></li>
 								<li><a href="/blackjack.php">Blackjack</a></li>
 								<li><a href="/connect-four">Connect Four</a></li>
-								<!-- <li><a href="whack-a-mole.html">Whack-A-Mole</a></li> -->
+								<li><a href="/whack-a-mole.html">Whack-A-Mole</a></li>
+								<li><a href="/simon-says.html">Hypnotoad Says</a></li>
 							</ul>
 						</li>
 						<li class="{{ Request::is('posts') ? 'active' : '' }}"><a href="{{{ action('PostsController@index') }}}">Blog</a></li>
