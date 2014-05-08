@@ -30,6 +30,18 @@ class HomeController extends BaseController {
 		return View::make('portfolio');
 	}
 
-	
+	public function showBlackjack()
+	{
+		return View::make('projects.blackjack');
+	}
 
+	public function showYahtzee()
+	{
+		return View::make('projects.yahtzee');
+	}
+
+	public function showConnect()
+	{
+		return View::make('projects.connect');
+	}
 }

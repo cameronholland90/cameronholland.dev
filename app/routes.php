@@ -26,3 +26,9 @@ Route::resource('posts', 'PostsController');
 Route::resource('users', 'UsersController');
 
 Route::get('/portfolio', 'HomeController@showPortfolio');
+
+Route::get('/blackjack', 'HomeController@showBlackjack');
+
+Route::get('/yahtzee', 'HomeController@showYahtzee');
+
+Route::get('/connect', 'HomeController@showConnect');
