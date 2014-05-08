@@ -45,7 +45,7 @@
 		<br>
 		<div class='row'>
 			<div class='col-md-3'>
-				<img class='img-responsive' src="img/Yahtzee.png" alt='Whack A Mole Web App' style="padding: 3px; background-color: #555; border: solid #000 2px; display: inline-block;">
+				<img class='img-responsive' src="img/Whack-a-mole.png" alt='Whack A Mole Web App' style="padding: 3px; background-color: #555; border: solid #000 2px; display: inline-block;">
 			</div>
 			<div class='col-md-9'>
 				<h4><strong>WHACK A MOLE</strong></h4>
@@ -56,7 +56,7 @@
 		<br>
 		<div class='row'>
 			<div class='col-md-3'>
-				<img class='img-responsive' src="img/Yahtzee.png" alt='Hypnotoad Says Web App' style="padding: 3px; background-color: #555; border: solid #000 2px; display: inline-block;">
+				<img class='img-responsive' src="img/Hypnotoad-says.png" alt='Hypnotoad Says Web App' style="padding: 3px; background-color: #555; border: solid #000 2px; display: inline-block;">
 			</div>
 			<div class='col-md-9'>
 				<h4><strong>HYPNOTOAD SAYS</strong></h4>
