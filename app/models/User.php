@@ -32,6 +32,21 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 	    'last_name'       => 'required|max:100'
 	);
 
+	public function getRememberToken()
+	{
+	    return $this->remember_token;
+	}
+
+	public function setRememberToken($value)
+	{
+	    $this->remember_token = $value;
+	}
+
+	public function getRememberTokenName()
+	{
+	    return 'remember_token';
+	}
+
 	/**
 	* Relationship for each user has many posts
 	*/
