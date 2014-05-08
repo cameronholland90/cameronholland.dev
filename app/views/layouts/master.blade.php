@@ -41,15 +41,15 @@
 					<ul class="nav navbar-nav navbar-right">
 						<li class="{{ Request::is('/') ? 'active' : '' }}"><a href="{{{ action('HomeController@showResume') }}}">Resume</a></li>
 						<li class="{{ Request::is('portfolio') ? 'active' : '' }}"><a href="{{{ action('HomeController@showPortfolio') }}}">Portfolio</a></li>
-						<!-- <li class="dropdown">
+						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<b class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<li><a href="yahtzee.php">Yahtzee</a></li>
-								<li><a href="blackjack.php">Blackjack</a></li>
-								<li><a href="connect-four.php">Connect Four</a></li>
-								<li><a href="whack-a-mole.html">Whack-A-Mole</a></li>
+								<li><a href="{{{ action('HomeController@showYahtzee') }}}">Yahtzee</a></li>
+								<li><a href="{{{ action('HomeController@showBlackjack') }}}">Blackjack</a></li>
+								<li><a href="{{{ action('HomeController@showConnect') }}}">Connect Four</a></li>
+								<!-- <li><a href="whack-a-mole.html">Whack-A-Mole</a></li> -->
 							</ul>
-						</li> -->
+						</li>
 						<li class="{{ Request::is('posts') ? 'active' : '' }}"><a href="{{{ action('PostsController@index') }}}">Blog</a></li>
 						@if (Auth::check())
 							<li><a href="{{{ action('UsersController@logout') }}}">Logout</a></li>
