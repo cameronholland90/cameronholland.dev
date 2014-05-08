@@ -45,24 +45,25 @@
 		<br>
 		<div class='row'>
 			<div class='col-md-3'>
-				<img class='img-responsive' src="img/todo-list.png" alt='Todo List Web App' style="padding: 3px; background-color: #555; border: solid #000 2px; display: inline-block;">
+				<img class='img-responsive' src="img/Yahtzee.png" alt='Whack A Mole Web App' style="padding: 3px; background-color: #555; border: solid #000 2px; display: inline-block;">
 			</div>
 			<div class='col-md-9'>
-				<h4><strong>TODO LIST</strong></h4>
-				<p>Todo list web application. Will have link working once I update it to allow any visitor to the page have a login with a todo list file for their login information</p>
-				<a href="todo-list.php" class='btn btn-success btn-sm' disabled='disabled'>Todo List</a>
+				<h4><strong>WHACK A MOLE</strong></h4>
+				<p>Web application for the game Whack-a-Mole. Made with Javascript and using a Hanna-Barbera theme</p>
+				<a href="whack-a-mole.html" class='btn btn-success btn-sm'>Whack-a-Mole</a>
 			</div>
 		</div>
 		<br>
 		<div class='row'>
 			<div class='col-md-3'>
-				<img class='img-responsive' src="img/address-book.png" alt='Address Book Web App' style="padding: 3px; background-color: #555; border: solid #000 2px; display: inline-block;">
+				<img class='img-responsive' src="img/Yahtzee.png" alt='Hypnotoad Says Web App' style="padding: 3px; background-color: #555; border: solid #000 2px; display: inline-block;">
 			</div>
 			<div class='col-md-9'>
-				<h4><strong>ADDRESS BOOK</strong></h4>
-				<p>Address book web application written with php. Will have link working when it works with login info like the todo web application</p>
-				<a href="address_book.php" class='btn btn-success btn-sm' disabled='disabled'>Address Book</a>
+				<h4><strong>HYPNOTOAD SAYS</strong></h4>
+				<p>Web application for the game simple simon. Made with Javascript and using a Futurama theme</p>
+				<a href="simon-says.html" class='btn btn-success btn-sm'>Hypnotoad Says</a>
 			</div>
 		</div>
+		<br>
 
 @stop
