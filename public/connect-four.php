@@ -211,7 +211,7 @@ if (isset($_GET['drop']) && is_numeric($_GET['drop'])) {
 				<div class="collapse navbar-collapse navHeaderCollapse nav-pills">
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="/">Resume</a></li>
-						<li><a href="portfolio.html">Portfolio</a></li>
+						<li><a href="portfolio">Portfolio</a></li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<b class="caret"></b></a>
 							<ul class="dropdown-menu">
