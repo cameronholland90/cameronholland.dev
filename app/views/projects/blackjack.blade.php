@@ -5,17 +5,21 @@
 
 	require_once('classes/blackjack-classes.php');
 
-	session_start();
-	if (isset($_SERVER['HTTP_REFERER']) && $_SERVER['HTTP_REFERER'] != 'http://cameronholland.me/blackjack.php') {
-		session_destroy();
-		session_start();
-	} elseif (isset($_POST['restart']) || ((isset($_POST['playagain']) && count($_SESSION['deck']->fullDeck) < 10))) {
-		session_destroy();
-		session_start();
+	
+	if (isset($_SERVER['HTTP_REFERER']) && $_SERVER['HTTP_REFERER'] != 'http://cameronholland.me/blackjack') {
+		Session::forget('deck');
+		Session::forget('player');
+		Session::forget('dealer');
+		Session::forget('win');
+	} elseif (isset($_POST['restart']) || ((isset($_POST['playagain']) && Session::get('deck')->fullDeck) < 10))) {
+		Session::forget('deck');
+		Session::forget('player');
+		Session::forget('dealer');
+		Session::forget('win');
 	} elseif (isset($_POST['playagain'])) {
-		unset($_SESSION['player']);
-		unset($_SESSION['dealer']);
-		unset($_SESSION['win']);
+		Session::forget('player');
+		Session::forget('dealer');
+		Session::forget('win');
 	}
 
 	if (!isset($_SESSION['deck'])) {

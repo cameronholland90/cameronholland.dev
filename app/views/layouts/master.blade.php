@@ -44,9 +44,9 @@
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<b class="caret"></b></a>
 							<ul class="dropdown-menu">
-								<li><a href="{{{ action('HomeController@showYahtzee') }}}">Yahtzee</a></li>
-								<li><a href="{{{ action('HomeController@showBlackjack') }}}">Blackjack</a></li>
-								<li><a href="{{{ action('HomeController@showConnect') }}}">Connect Four</a></li>
+								<li><a href="/yahtzee.php">Yahtzee</a></li>
+								<li><a href="/blackjack.php">Blackjack</a></li>
+								<li><a href="/connect-four">Connect Four</a></li>
 								<!-- <li><a href="whack-a-mole.html">Whack-A-Mole</a></li> -->
 							</ul>
 						</li>
