@@ -32,3 +32,10 @@ Route::get('/blackjack', 'HomeController@showBlackjack');
 Route::get('/yahtzee', 'HomeController@showYahtzee');
 
 Route::get('/connect', 'HomeController@showConnect');
+
+Route::get('/html-forms', function() {
+	return View::make('html-forms');
+});
+Route::get('/version-control', function() {
+	return View::make('version-control');
+});
