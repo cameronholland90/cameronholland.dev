@@ -11,6 +11,13 @@
 |
 */
 
+Route::controller('projects', 'ProjectsController');
+Route::get('/ajax/blackjack-card', 'ProjectsController@getHandHtml');
+Route::get('/ajax/blackjack-deck', 'ProjectsController@getDeckHtml');
+
+Route::get('/ajax/alert-message', 'HomeController@alertMessage');
+Route::get('/ajax/bootbox-template', 'HomeController@bootboxTemplate');
+
 Route::get('/login', 'UsersController@showLogin');
 
 Route::get('/logout', 'UsersController@logout');
@@ -26,12 +33,6 @@ Route::resource('posts', 'PostsController');
 Route::resource('users', 'UsersController');
 
 Route::get('/portfolio', 'HomeController@showPortfolio');
-
-Route::get('/blackjack', 'HomeController@showBlackjack');
-
-Route::get('/yahtzee', 'HomeController@showYahtzee');
-
-Route::get('/connect', 'HomeController@showConnect');
 
 Route::get('/html-forms', function() {
 	return View::make('html-forms');

@@ -2,16 +2,20 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
     <link href="/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script src='/js/jquery.tagsinput.min.js'></script>
 	<script src="/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/js/bootbox.min.js"></script>
+
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css"/>
 	<link rel="stylesheet" type="text/css" href="/css/carousel.css"/>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="/css/jquery.tagsinput.css">
-	<link rel="stylesheet" type="text/css" href="/stylesheet.css">
-	<link rel="shortcut icon" href="img/Arches v2-6.jpg" />
+	<link rel="stylesheet" type="text/css" href="/css/stylesheet.css">
+	<link rel="shortcut icon" href="/img/Arches v2-6.jpg" />
 	@yield('tab-title')
 </head>
 <body>
@@ -32,7 +36,7 @@
 				        <div class="input-group">
 				            <input type="text" class="form-control" placeholder="Search Blog by Keyword" name="search" value='{{ Input::get('search') }}'>
 				            <div class="input-group-btn">
-				                <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+				                <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
 				            </div>
 				        </div>
 			        </form>
@@ -40,13 +44,13 @@
 				<div class="collapse navbar-collapse navHeaderCollapse nav-pills">
 					<ul class="nav navbar-nav navbar-right">
 						<li class="{{ Request::is('/') ? 'active' : '' }}"><a href="{{{ action('HomeController@showResume') }}}">Resume</a></li>
-						<li class="{{ Request::is('portfolio') ? 'active' : '' }}"><a href="{{{ action('HomeController@showPortfolio') }}}">Portfolio</a></li>
+						<li class="{{ Request::is('projects/all') ? 'active' : '' }}"><a href="{{{ action('ProjectsController@getAll') }}}">Portfolio</a></li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<b class="caret"></b></a>
 							<ul class="dropdown-menu">
 								<li><a href="/yahtzee.php">Yahtzee</a></li>
-								<li><a href="/blackjack.php">Blackjack</a></li>
-								<li><a href="/connect-four">Connect Four</a></li>
+								<li><a href="{{ action('ProjectsController@getBlackjack') }}">Blackjack</a></li>
+								<li><a href="/connect-four.php">Connect Four</a></li>
 								<li><a href="/whack-a-mole.html">Whack-A-Mole</a></li>
 								<li><a href="/simon-says.html">Hypnotoad Says</a></li>
 							</ul>
