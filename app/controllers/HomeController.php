@@ -44,4 +44,20 @@ class HomeController extends BaseController {
 	{
 		return View::make('projects.connect');
 	}
+
+	public function alertMessage()
+	{
+		$alert_message = Input::get('alert_message');
+		$alert_type = Input::get('alert_type');
+
+		return View::make('layouts.partials.alert')->with(['alert_message' => $alert_message, 'alert_type' => $alert_type]);
+	}
+
+	public function bootboxTemplate()
+	{
+		$bootbox_template_name = Input::get('bootbox_template_name');
+
+		return View::make('bootbox.' . $bootbox_template_name);
+	}
+
 }
