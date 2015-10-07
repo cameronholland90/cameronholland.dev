@@ -1,0 +1,21 @@
+.alert-danger {
+	background-image: none;
+}
+.alert-success {
+	background-image: none;
+}
+#wins-count,
+#loses-count {
+	font-size: 30px;
+}
+.wins-loses {
+	background-color: white;
+	border-radius: 5px;
+	border:	5px solid #95a5a6;
+	color: black;
+	font-family: 'Black Ops One', cursive;
+}
+.wins-loses h2 {
+	color: black;
+	font-family: 'Black Ops One', cursive;
+}

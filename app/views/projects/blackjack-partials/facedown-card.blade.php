@@ -1,0 +1,1 @@
+<img class='outline shadow rounded cardback {{ $overlay }}' src='/img/{{ $card_back }}'/>
