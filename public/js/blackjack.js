@@ -530,6 +530,9 @@
 
 				dealCard( dealer_hand_key );
 			}
+			else if ( hand_score == player_hand_score ) {
+				endGame( 'Dealer Wins.', false );
+			}
 			else 
 			{
 
