@@ -28,6 +28,8 @@ Route::get('/', 'HomeController@showResume');
 
 Route::get('/resume', 'HomeController@showResume');
 
+// Route::get('/about', 'HomeController@about');
+
 Route::resource('posts', 'PostsController');
 
 Route::resource('users', 'UsersController');
