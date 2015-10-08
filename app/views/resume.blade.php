@@ -5,127 +5,136 @@
 
 @stop
 
-@section('carousel')
-	<!-- Carousel
-    ================================================== -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="item active">
-          <img src="img/programming-carousel-image.jpg" alt="First slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>My Code</h1>
-              <p>If you would like to take a look at all of my code, click the button below to go to my GitHub account</p>
-              <p><a class="btn btn-lg btn-primary" href="https://github.com/cameronholland90" role="button">GitHub</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="img/Screen Shot 2014-03-07 at 12.50.47 PM.png" alt="Second slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>About me</h1>
-              <p>I became passionate about programming because I get to solve problems, whether it be large or small.</p>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="img/Screen Shot 2014-03-07 at 12.51.08 PM.png" alt="Third slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>LinkedIn</h1>
-              <p>If you would like to connect with me on LinkedIn, click the button below.</p>
-              <p><a class="btn btn-lg btn-primary" href="www.linkedin.com/in/cameronholland90/" role="button">LinkedIn</a></p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-    </div><!-- /.carousel -->
-
-@stop
-
 @section('content')
+	<div id="resume">
 		<div class="page-header">
-			<h1><img src="img/Arches v2-6.jpg" alt="Head Shot" class="img-circle" style="vertical-align: baseline;">Cameron Holland <small>Junior Software Developer</small></h1>
+			<h1>
+				<img src="/img/Arches v2-6.jpg" alt="Head Shot" class="img-circle resume-profile">
+				Cameron Holland <small>Software Developer</small>
+			</h1>
 		</div>
-		<div class='row'>
-			<div class='col-md-2'><strong>CONTACT</strong></div>
-			<div class='col-md-8'><strong>Cameron Holland</strong><br><a href="mailto:cameron@thenearsky.com">cameron@thenearsky.com</a></div>
-			<div class='col-md-2'><a href="www.linkedin.com/in/cameronholland90/">LinkedIn</a><br><a href="https://github.com/cameronholland90">GitHub</a></div>
+
+		<div id="contact">
+			<div class='row'>
+				<div class='col-md-12'>
+					<h2>CONTACT</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class='col-md-8 col-md-offset-1'>
+					<p><strong>Cameron Holland</strong></p>
+					<p><a href="mailto:cameron@thenearsky.com">cameron@thenearsky.com</a></p>
+				</div>
+				<div class='col-md-3'>
+					<p><a href="http://www.linkedin.com/in/cameronholland90/">LinkedIn</a></p>
+					<p><a href="https://github.com/cameronholland90">GitHub</a></p>
+				</div>
+			</div>
 		</div>
+
 		<hr>
-		<div class='row'>
-			<div class='col-md-2'><strong>WORK EXPERIENCE</strong></div>
-			<div class='col-md-8'>
-				<strong>Great Southern Coins</strong><br>
-				Online auction responsibilities include preparing coins, photographing coins, editing photos and online posting. Direct sales responsibilities include locating coins requested by customers and processing orders.  Additional duties include packaging, shipping and tracking merchandise shipments.
+
+		<div id="work-experience">
+			<div class='row'>
+				<div class='col-md-12'>
+					<h2>WORK EXPERIENCE</h2>
+				</div>
 			</div>
-			<div class='col-md-2'>
-				February 2013 - February 2014
+			<div class="row">
+				<div class="col-md-11 col-md-offset-1">
+					<h3><span>Codeup</span> <small>San Antonio, TX</small></h3>
+				</div>
+				<div class='col-md-8 col-md-offset-1'>
+					<p>Instructor for the LAMP+J stack bootcamp. Responsibilities included lecturing, one on one help with students, working on curriculum and helping students through their final projects.</p>
+				</div>
+				<div class='col-md-3'>
+					<p class="start-end-date">Setember 2015 - Present</p>
+				</div>
+			</div>
+			<br>
+			<div class='row'>
+				<div class="col-md-11 col-md-offset-1">
+					<h3><span>Freedom Driven LLC</span> <small>San Antonio, TX</small></h3>
+				</div>
+				<div class='col-md-8 col-md-offset-1'>
+					<p>Lead Developer for LeadPropeller.com. Developed new features working on both front and back end using the full LAMP+J stack. Responsible for maintenance of LeadPropeller.com and user websites. Completed user requested customization on user websites. In charge of all customer support and inbound sales calls. Managed user accounts and invoices. Created video tutorials explaining the features included on LeadPropeller.com. Also responsible for customer support and payment accounts for REImobile.com.</p>
+				</div>
+				<div class='col-md-3'>
+					<p class="start-end-date">May 2014 - September 2015</p>
+				</div>
+			</div>
+			<br>
+			<div class='row'>
+				<div class="col-md-11 col-md-offset-1">
+					<h3><span>Great Southern Coins</span> <small>Boerne, TX</small></h3>
+				</div>
+				<div class='col-md-8 col-md-offset-1'>
+					<p>Online auction responsibilities include preparing coins, photographing coins, editing photos and online posting. Direct sales responsibilities include locating coins requested by customers and processing orders.  Additional duties include packaging, shipping and tracking merchandise shipments.</p>
+				</div>
+				<div class='col-md-3'>
+					<p class="start-end-date">February 2013 - February 2014</p>
+				</div>
 			</div>
 		</div>
-		<br>
-		<div class='row'>
-			<div class='col-md-2'></div>
-			<div class='col-md-8'>
-				<strong>Saltgrass Steakhouse</strong><br>
-				Worked as server, host, and busser.  Additional responsibilities included assisting in training new servers.
-			</div>
-			<div class='col-md-2'>
-				April 2011 – January 2013
-			</div>
-		</div>
+
 		<hr>
-		<div class='row'>
-			<div class='col-md-2'><strong>EDUCATION</strong></div>
-			<div class='col-md-8'>
-				<strong>LAMP+J Software Development Bootcamp</strong><br>
-				<a href="http://www.codeup.com/">Codeup</a><br>
-				<em>San Antonio, TX</em>
+
+		<div id="education">
+			<div class='row'>
+				<div class='col-md-12'>
+					<h2>EDUCATION</h2>
+				</div>
 			</div>
-			<div class='col-md-2'>
-				Graduating in April 2014<br>
-				<button type='button' class='btn btn-xs btn-success' disabled='disabled'>IN PROGRESS</button>
+			<div class="row">
+				<div class='col-md-8 col-md-offset-1'>
+					<h3><span>LAMP+J Software Development Bootcamp</span> <small>San Antonio, TX</small></h3>
+					<p><a href="http://www.codeup.com/">Codeup</a></p>
+					<ul>
+						<li>PHP, Laravel, Javascript, MySQL, HTML, CSS and Bootstrap</li>
+						<li>Some experience with PhoneGap</li>
+						<li>Created Get It Red web and iOS app with my team as our capstone project</li>
+						<li>Learned how to work well with a team and assign tasks</li>
+					</ul>
+				</div>
+				<div class='col-md-3'>
+					<p class="start-end-date">February 2014 - April 2014</p>
+				</div>
+			</div>
+			<br>
+			<div class='row'>
+				<div class='col-md-8 col-md-offset-1'>
+					<h3><span>Northwest Vista Community College</span> <small>San Antonio, TX</small></h3>
+					<p><a href="https://www.alamo.edu/nvc/">NWVCC</a></p>
+				</div>
+				<div class='col-md-3'>
+					<p class="start-end-date">January 2009 – May 2010</p>
+				</div>
+			</div>
+			<br>
+			<div class='row'>
+				<div class='col-md-8 col-md-offset-1'>
+					<h3><span>Abilene Christian University</span> <small>Abilene, TX</small></h3>
+					<p><a href="http://www.acu.edu/">ACU</a></p>
+				</div>
+				<div class='col-md-3'>
+					<p class="start-end-date">August 2008 – December 2008</p>
+				</div>
+			</div>
+			<br>
+			<div class='row'>
+				<div class='col-md-8 col-md-offset-1'>
+					<h3><span>Sandra Day O’Connor High School</span> <small>Helotes, TX</small></h3>
+					<p><a href="http://www.nisd.net/oconnor/">OHS</a></p>
+				</div>
+				<div class='col-md-3'>
+					<p class="start-end-date">August 2004 – May 2008</p>
+				</div>
+			</div>
+			<div class="row text-center">
+				<a href="/downloads/resume.pdf" class="btn btn-success">Download PDF</a>
 			</div>
 		</div>
-		<br>
-		<div class='row'>
-			<div class='col-md-2'></div>
-			<div class='col-md-8'>
-				<strong>Northwest Vista Community College</strong><br>
-				<a href="https://www.alamo.edu/nvc/">NWVCC</a><br>
-				<em>San Antonio, TX</em>
-			</div>
-			<div class='col-md-2'>January 2009 – May 2010</div>
-		</div>
-		<br>
-		<div class='row'>
-			<div class='col-md-2'></div>
-			<div class='col-md-8'>
-				<strong>Abilene Christian University</strong><br>
-				<a href="http://www.acu.edu/">ACU</a><br>
-				<em>Abilene, TX</em>
-			</div>
-			<div class='col-md-2'>August 2008 – December 2008</div>
-		</div>
-		<br>
-		<div class='row'>
-			<div class='col-md-2'></div>
-			<div class='col-md-8'>
-				<strong>Sandra Day O’Connor High School</strong><br>
-				<a href="http://www.nisd.net/oconnor/">OHS</a><br>
-				<em>Helotes, TX</em>
-			</div>
-			<div class='col-md-2'>August 2004 – May 2008</div>
-		</div>
+	</div>
 	
 	
 @stop

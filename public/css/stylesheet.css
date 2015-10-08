@@ -39,6 +39,40 @@
   border-top-right-radius: 0;
 }
 
+.main-container {
+	color: rgb(192, 192, 192);
+	background-color: #222; 
+	border-radius: 10px; 
+	padding: 50px; 
+	margin-top: 100px;
+}
+
+#resume h2,
+#resume h3 {
+	color: rgb(192, 192, 192);
+}
+
+#resume h3 span {
+	text-decoration: underline;
+}
+
+#resume h3 small {
+	font-style: italic;
+}
+
+.start-end-date {
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#education .start-end-date {
+	margin-top: 20px;
+}
+
+.resume-profile {
+	vertical-align: baseline;
+}
+
 /*blackjack*/
 .outline { 
 	width: 110px; 
@@ -86,14 +120,6 @@
 /*yahtzee*/
 .die {
 	font-size: 100px;
-}
-
-.main-container {
-	color: rgb(192, 192, 192);
-	background-color: #222; 
-	border-radius: 10px; 
-	padding: 50px; 
-	margin-top: 100px;
 }
 
 /*whack-a-mole*/
