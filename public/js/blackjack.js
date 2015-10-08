@@ -1,4 +1,5 @@
 (function () {
+	
 	// hide game to wait for user to start
 	$('#game-board').hide();
 	$('#extra-hands').hide();
@@ -52,7 +53,9 @@
 
 		deck_back++;
 
-		if (deck_back > deck_back_options.length - 1) {
+		if (deck_back > deck_back_options.length - 1) 
+		{
+
 			deck_back = 0;
 		};
 
@@ -137,6 +140,7 @@
 
 		if ( getCardValueInt( card1 ) == getCardValueInt( card2 ) ) 
 		{
+
 			$('.split').show();
 		}
 	}
@@ -324,6 +328,7 @@
 
 		for (var i = hands[hand_key].length - 1; i >= 0; i--) 
 		{
+
 			card_score = getCardValueInt( hands[hand_key][i], hand_score );
 			if ( card_score == 11 ) 
 			{
@@ -530,7 +535,9 @@
 
 				dealCard( dealer_hand_key );
 			}
-			else if ( hand_score == player_hand_score ) {
+			else if ( hand_score == player_hand_score ) 
+			{
+
 				endGame( 'Dealer Wins.', false );
 			}
 			else 

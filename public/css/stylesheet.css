@@ -1,3 +1,8 @@
+html,
+body {
+	background-image: url(/img/congruent_outline.png);
+}
+
 /*main page*/
 .dif-col {
 	color: black !important;
@@ -40,16 +45,38 @@
 }
 
 .main-container {
-	color: rgb(192, 192, 192);
-	background-color: #222; 
+	color: #444;
+	background-image: url(/img/subtle_white_feathers.png); 
 	border-radius: 10px; 
 	padding: 50px; 
 	margin-top: 100px;
 }
 
+.main-container a {
+	color: royalblue;
+}
+
+.main-container h2,
+.main-container h3,
+.main-container h4,
+.main-container h5,
+.main-container h6 {
+	color: #222;
+}
+
+a.btn-download,
+button.btn-download {
+	background-color: slategray;
+	color: #fff;
+}
+
+.page-header h1 {
+	color: #000;
+}
+
 #resume h2,
 #resume h3 {
-	color: rgb(192, 192, 192);
+	color: #000;
 }
 
 #resume h3 span {
@@ -98,9 +125,9 @@
 }
 
 .shadow { 
-	box-shadow: 1px 1px 3px #000; 
-	-moz-box-shadow: 1px 1px 3px #000; 
-	-webkit-box-shadow: 1px 1px 3px #000; 
+	box-shadow: 4px 2px 3px #666; 
+	-moz-box-shadow: 4px 2px 3px #666; 
+	-webkit-box-shadow: 4px 2px 3px #666; 
 }
 
 .rounded { 
@@ -162,4 +189,7 @@
 }
 .bootbox-inner-container {
 	background-color: #222; 
+}
+.modal-content {
+	background-image: url(/img/congruent_outline.png);
 }
