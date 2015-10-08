@@ -24,7 +24,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="navbar-header">
-					<a href="/resume" class="navbar-brand">CameronHolland.me</a>
+					<a href="/" class="navbar-brand">CameronHolland.me</a>
 					<button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
@@ -43,7 +43,7 @@
 			    </div> -->
 				<div class="collapse navbar-collapse navHeaderCollapse nav-pills">
 					<ul class="nav navbar-nav navbar-right">
-						<li class="{{ Request::is('/') ? 'active' : '' }}"><a href="{{{ action('HomeController@showResume') }}}">Resume</a></li>
+						<li class="{{ Request::is('/') ? 'active' : '' }}"><a href="/">Resume</a></li>
 						<li class="{{ Request::is('projects/all') ? 'active' : '' }}"><a href="{{{ action('ProjectsController@getAll') }}}">Portfolio</a></li>
 						<li class="dropdown">
 							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects<b class="caret"></b></a>

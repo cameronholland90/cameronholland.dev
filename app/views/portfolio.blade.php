@@ -11,7 +11,7 @@
 		</div>
 		<div class='row'>
 			<div class='col-md-6'>
-				<img class='img-responsive' alt="Lead Propeller Web App" src="/img/leadpropeller.png" style="display: inline-block; padding: 5px; background-color: #555; border: solid #000 2px;" />
+				<img class='img-responsive' alt="Lead Propeller Web App" src="/img/portfolio/leadpropeller.png" style="display: inline-block; padding: 5px; background-color: #555; border: solid #000 2px;" />
 			</div>
 			<div class='col-md-6' style='vertical-align: center;'>
 				<h3><strong>LEAD PROPELLER</strong></h3>
@@ -22,7 +22,7 @@
 		<hr>
 		<div class='row'>
 			<div class='col-md-3'>
-				<img class='img-responsive' src="/img/blackjack-js.png" alt='Blackjack Web App in Javascript' style="padding: 3px; background-color: #555; border: solid #000 2px; display: inline-block;">
+				<img class='img-responsive' src="/img/portfolio/blackjack-js.png" alt='Blackjack Web App in Javascript' style="padding: 3px; background-color: #555; border: solid #000 2px; display: inline-block;">
 			</div>
 			<div class='col-md-9'>
 				<h4><strong>BLACKJACK IN JS</strong></h4>
@@ -34,7 +34,7 @@
 		<br>
 		<div class='row'>
 			<div class='col-md-3'>
-				<img class='img-responsive' src="/img/Blackjack.png" alt='Blackjack Web App in PHP' style="padding: 3px; background-color: #555; border: solid #000 2px; display: inline-block;">
+				<img class='img-responsive' src="/img/portfolio/blackjack-php.png" alt='Blackjack Web App in PHP' style="padding: 3px; background-color: #555; border: solid #000 2px; display: inline-block;">
 			</div>
 			<div class='col-md-9'>
 				<h4><strong>BLACKJACK IN PHP</strong></h4>
@@ -46,7 +46,7 @@
 		<br>
 		<div class='row'>
 			<div class='col-md-3'>
-				<img class='img-responsive' src="/img/Connect-Four.png" alt='Connect Four Web App' style="padding: 3px; background-color: #555; border: solid #000 2px; display: inline-block;">
+				<img class='img-responsive' src="/img/portfolio/connect-four.png" alt='Connect Four Web App' style="padding: 3px; background-color: #555; border: solid #000 2px; display: inline-block;">
 			</div>
 			<div class='col-md-9'>
 				<h4><strong>CONNECT FOUR</strong></h4>
@@ -57,7 +57,7 @@
 		<br>
 		<div class='row'>
 			<div class='col-md-3'>
-				<img class='img-responsive' src="/img/Yahtzee.png" alt='Yahtzee Web App' style="padding: 3px; background-color: #555; border: solid #000 2px; display: inline-block;">
+				<img class='img-responsive' src="/img/portfolio/yahtzee.png" alt='Yahtzee Web App' style="padding: 3px; background-color: #555; border: solid #000 2px; display: inline-block;">
 			</div>
 			<div class='col-md-9'>
 				<h4><strong>YAHTZEE</strong></h4>
@@ -68,7 +68,7 @@
 		<br>
 		<div class='row'>
 			<div class='col-md-3'>
-				<img class='img-responsive' src="/img/Whack-a-mole.jpg" alt='Whack A Mole Web App' style="padding: 3px; background-color: #555; border: solid #000 2px; display: inline-block;">
+				<img class='img-responsive' src="/img/portfolio/whack-a-mole.png" alt='Whack A Mole Web App' style="padding: 3px; background-color: #555; border: solid #000 2px; display: inline-block;">
 			</div>
 			<div class='col-md-9'>
 				<h4><strong>WHACK A MOLE</strong></h4>
@@ -79,7 +79,7 @@
 		<br>
 		<div class='row'>
 			<div class='col-md-3'>
-				<img class='img-responsive' src="/img/Hypnotoad-says.jpg" alt='Hypnotoad Says Web App' style="padding: 3px; background-color: #555; border: solid #000 2px; display: inline-block;">
+				<img class='img-responsive' src="/img/portfolio/hypnotoad-says.png" alt='Hypnotoad Says Web App' style="padding: 3px; background-color: #555; border: solid #000 2px; display: inline-block;">
 			</div>
 			<div class='col-md-9'>
 				<h4><strong>HYPNOTOAD SAYS</strong></h4>
