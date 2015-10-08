@@ -35,8 +35,8 @@ Route::resource('users', 'UsersController');
 Route::get('/portfolio', 'HomeController@showPortfolio');
 
 Route::get('/html-forms', function() {
-	return View::make('html-forms');
+	return View::make('codeup-mock-instruction.html-forms');
 });
 Route::get('/version-control', function() {
-	return View::make('version-control');
+	return View::make('codeup-mock-instruction.version-control');
 });
