@@ -557,8 +557,8 @@
 		if ( bust ) 
 		{
 
-			busted_hands.push( hand_key );
-			// endGame( 'Dealer Wins. Player Busts.', false );
+			// busted_hands.push( hand_key );
+			endGame( 'Dealer Wins. Player Busts.', false );
 		}
 	});
 	$(document).on('click', '.stay', function() {
