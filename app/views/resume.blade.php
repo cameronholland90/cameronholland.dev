@@ -21,13 +21,20 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class='col-md-8 col-md-offset-1'>
-					<p><strong>Cameron Holland</strong></p>
-					<p><a href="mailto:cameron@thenearsky.com">cameron@thenearsky.com</a></p>
+				<div class='col-md-4 text-center'>
+					<div class="contact-icons">
+						<a href="mailto:cameron@thenearsky.com"><i class="fa fa-envelope"></i></a>
+					</div>
 				</div>
-				<div class='col-md-3'>
-					<p><a href="http://www.linkedin.com/in/cameronholland90/">LinkedIn</a></p>
-					<p><a href="https://github.com/cameronholland90">GitHub</a></p>
+				<div class='col-md-4 text-center'>
+					<div class="contact-icons">
+						<a href="https://github.com/cameronholland90"><i class="fa fa-github"></i></a>
+					</div>
+				</div>
+				<div class='col-md-4 text-center'>
+					<div class="contact-icons">
+						<a href="http://www.linkedin.com/in/cameronholland90/"><i class="fa fa-linkedin-square"></i></a>
+					</div>
 				</div>
 			</div>
 		</div>
