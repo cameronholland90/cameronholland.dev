@@ -131,7 +131,7 @@
 				</div>
 			</div>
 			<div class="row text-center">
-				<a href="/downloads/resume.pdf" class="btn btn-download"><i class="fa fa-file-pdf-o"></i> Download PDF</a>
+				<a href="/downloads/resume.pdf" class="btn btn-custom"><i class="fa fa-file-pdf-o"></i> Download PDF</a>
 			</div>
 		</div>
 	</div>
