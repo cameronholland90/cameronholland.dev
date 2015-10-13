@@ -3,10 +3,6 @@ body {
 	background-image: url(/img/backgrounds/congruent_outline.png);
 }
 
-.main-container a.btn {
-	color: white;
-}
-
 /*main page*/
 .dif-col {
 	color: black !important;
@@ -56,8 +52,41 @@ body {
 	margin-top: 100px;
 }
 
+.main-container a.btn {
+	color: white;
+}
+
 .main-container a {
-	color: royalblue;
+	color: #195062;
+}
+.main-container a:hover {
+	color: darkblue;
+}
+
+.contact-icons {
+	display: inline-block;
+	font-size: 50px;
+	color: #195062;
+	-webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    /*transition: all 200ms ease-in;*/
+    transform: scale(1);
+}
+.contact-icons:hover {
+	font-size: 50px;
+	color: darkblue;
+	-webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.5);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.5);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.5);
+    transition: all 200ms ease-in;
+    transform: scale(1.5);
 }
 
 .main-container h2,
@@ -68,9 +97,14 @@ body {
 	color: #222;
 }
 
-a.btn-download,
-button.btn-download {
-	background-color: slategray;
+a.btn-custom,
+button.btn-custom {
+	background-color: steelblue;
+	color: #fff;
+}
+a.btn-custom:hover,
+button.btn-custom:hover {
+	background-color: darkblue;
 	color: #fff;
 }
 
@@ -196,4 +230,22 @@ button.btn-download {
 }
 .modal-content {
 	background-image: url(/img/congruent_outline.png);
+}
+
+.nav .caret {
+	border-top-color: #A2A2A2;
+	border-bottom-color: #A2A2A2;
+}
+
+.navbar {
+	border-bottom-color: #195062;
+}
+.navbar-inverse {
+	background-color: #195062;
+}
+.navbar-inverse .navbar-nav > li > a {
+	color: #A2A2A2;
+}
+.dropdown-menu {
+	background-color: #195062;
 }
