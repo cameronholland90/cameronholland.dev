@@ -1,0 +1,9 @@
+.connect-four-block	{
+	
+}
+
+.connect-four-column {
+	width: 14.28%;
+	height: 28.5%;
+	background-color: blue;
+}

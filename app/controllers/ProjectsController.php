@@ -15,6 +15,12 @@ class ProjectsController extends \BaseController {
 	}
 
 
+	public function getHalSays()
+	{
+		return View::make('projects.hal');
+	}
+
+
 	public function getFizzBuzzNoLoops()
 	{
 		return View::make('projects.fizzbuzz');
