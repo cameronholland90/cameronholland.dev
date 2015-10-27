@@ -3,7 +3,7 @@
 require_once('classes/blackjack-classes.php');
 
 session_start();
-if (isset($_SERVER['HTTP_REFERER']) && $_SERVER['HTTP_REFERER'] != 'http://cameronholland.me/blackjack.php') {
+if (isset($_SERVER['HTTP_REFERER']) && ($_SERVER['HTTP_REFERER'] != 'http://cameronholland.dev/blackjack.php' && $_SERVER['HTTP_REFERER'] != 'http://cameronholland.me/blackjack.php')) {
 	session_destroy();
 	session_start();
 } elseif (isset($_POST['restart']) || ((isset($_POST['playagain']) && count($_SESSION['deck']->fullDeck) < 10))) {
@@ -52,7 +52,7 @@ if (!isset($_POST['stay'])) {
 	<link href='http://fonts.googleapis.com/css?family=Revalia' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
 	<link rel="stylesheet" type="text/css" href="css/carousel.css"/>
-	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<link rel="stylesheet" type="text/css" href="css/stylesheet.css">
 	<link rel="shortcut icon" href="img/Arches v2-6.jpg" />
 	<title>Blackjack</title>
 </head>
