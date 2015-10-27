@@ -15,6 +15,18 @@ class ProjectsController extends \BaseController {
 	}
 
 
+	public function getFizzBuzzNoLoops()
+	{
+		return View::make('projects.fizzbuzz');
+	}
+
+
+	public function getFizzBuzzNoConditionals()
+	{
+		return View::make('projects.fizzbuzz-nocondition');
+	}
+
+
 	public function getHandHtml()
 	{
 		$hand = Input::get('hand');
