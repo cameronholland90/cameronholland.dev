@@ -22,7 +22,7 @@
 		<hr>
 		<div class='row'>
 			<div class='col-md-3'>
-				<img class='img-responsive' src="/img/portfolio/blackjack-js.png" alt='Blackjack Web App in Javascript' style="padding: 3px; background-color: #555; border: solid #000 2px; display: inline-block;">
+				<img class='small-project-img img-responsive' src="/img/portfolio/blackjack-js.png" alt='Blackjack Web App in Javascript'>
 			</div>
 			<div class='col-md-9'>
 				<h4><strong>BLACKJACK IN JS</strong></h4>
@@ -34,7 +34,7 @@
 		<br>
 		<div class='row'>
 			<div class='col-md-3'>
-				<img class='img-responsive' src="/img/portfolio/blackjack-php.png" alt='Blackjack Web App in PHP' style="padding: 3px; background-color: #555; border: solid #000 2px; display: inline-block;">
+				<img class='small-project-img img-responsive' src="/img/portfolio/blackjack-php.png" alt='Blackjack Web App in PHP'>
 			</div>
 			<div class='col-md-9'>
 				<h4><strong>BLACKJACK IN PHP</strong></h4>
@@ -46,7 +46,7 @@
 		<br>
 		<div class='row'>
 			<div class='col-md-3'>
-				<img class='img-responsive' src="/img/portfolio/connect-four.png" alt='Connect Four Web App' style="padding: 3px; background-color: #555; border: solid #000 2px; display: inline-block;">
+				<img class='small-project-img img-responsive' src="/img/portfolio/connect-four.png" alt='Connect Four Web App'>
 			</div>
 			<div class='col-md-9'>
 				<h4><strong>CONNECT FOUR</strong></h4>
@@ -57,7 +57,7 @@
 		<br>
 		<div class='row'>
 			<div class='col-md-3'>
-				<img class='img-responsive' src="/img/portfolio/yahtzee.png" alt='Yahtzee Web App' style="padding: 3px; background-color: #555; border: solid #000 2px; display: inline-block;">
+				<img class='small-project-img img-responsive' src="/img/portfolio/yahtzee.png" alt='Yahtzee Web App'>
 			</div>
 			<div class='col-md-9'>
 				<h4><strong>YAHTZEE</strong></h4>
@@ -68,7 +68,7 @@
 		<br>
 		<div class='row'>
 			<div class='col-md-3'>
-				<img class='img-responsive' src="/img/portfolio/whack-a-mole.png" alt='Whack A Mole Web App' style="padding: 3px; background-color: #555; border: solid #000 2px; display: inline-block;">
+				<img class='small-project-img img-responsive' src="/img/portfolio/whack-a-mole.png" alt='Whack A Mole Web App'>
 			</div>
 			<div class='col-md-9'>
 				<h4><strong>WHACK A MOLE</strong></h4>
@@ -79,12 +79,23 @@
 		<br>
 		<div class='row'>
 			<div class='col-md-3'>
-				<img class='img-responsive' src="/img/portfolio/hypnotoad-says.png" alt='Hypnotoad Says Web App' style="padding: 3px; background-color: #555; border: solid #000 2px; display: inline-block;">
+				<img class='small-project-img img-responsive' src="/img/portfolio/hypnotoad-says.png" alt='Hypnotoad Says Web App'>
 			</div>
 			<div class='col-md-9'>
 				<h4><strong>HYPNOTOAD SAYS</strong></h4>
 				<p>Web application for the game simple simon. Made with Javascript and using a Futurama theme</p>
 				<a href="/simon-says.html" class='btn btn-custom btn-sm'>Hypnotoad Says</a>
+			</div>
+		</div>
+		<br>
+		<div class='row'>
+			<div class='col-md-3'>
+				<img class='small-project-img img-responsive' src="/img/portfolio/hal-9000.png" alt='Hal 9000 Says Web App'>
+			</div>
+			<div class='col-md-9'>
+				<h4><strong>HAL 9000 SAYS</strong></h4>
+				<p>Web application for the game simple simon. Made with Javascript and using a Hal 9000 theme</p>
+				<a href="{{ action('ProjectsController@getHalSays') }}" class='btn btn-custom btn-sm'>Hal 9000 Says</a>
 			</div>
 		</div>
 		<br>

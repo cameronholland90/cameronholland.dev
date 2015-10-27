@@ -217,3 +217,10 @@ button.btn-custom:hover {
 .dropdown-menu {
 	background-color: #195062;
 }
+
+.small-project-img {
+	padding: 3px;
+	background-color: #555;
+	border: solid #000 2px;
+	display: inline-block;
+}

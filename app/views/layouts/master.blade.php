@@ -46,6 +46,7 @@
 								<li><a href="/connect-four.php">Connect Four</a></li>
 								<li><a href="/whack-a-mole.html">Whack-A-Mole</a></li>
 								<li><a href="/simon-says.html">Hypnotoad Says</a></li>
+								<li><a href="{{ action('ProjectsController@getHalSays') }}">Hal 9000 Says</a></li>
 							</ul>
 						</li>
 						<!-- <li class="{{ Request::is('posts') ? 'active' : '' }}"><a href="{{{ action('PostsController@index') }}}">Blog</a></li> -->
@@ -101,9 +102,9 @@
 	{{ Session::forget('successMessage'); }}
     {{ Session::forget('errorMessage'); }}
 
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src='/js/jquery.tagsinput.min.js'></script>
-	<script src="/bootstrap/js/bootstrap.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 	@yield('bottom-script')
 </body>
 </html>
