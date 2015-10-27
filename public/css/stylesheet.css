@@ -187,38 +187,6 @@ button.btn-custom:hover {
 	font-size: 100px;
 }
 
-/*whack-a-mole*/
-.hole {
-	width: 150px;
-	height: 150px;
-	border: solid 1px #000;
-	float: left;
-}
-
-.board {
-	margin: 100px auto;
-	width: 450px;
-	height: 450px;
-}
-
-.hole>img {
-	width: 148px;
-	height: 148px;
-	display: none;
-}
-
-.whack-body {
-	cursor: url("img/caveman3.png"), auto;
-	background-image: url("img/secret-squirrel-background.jpg");
-	background-repeat: no-repeat;
-	background-attachment:fixed;
-	background-size: 100%;
-}
-
-.whack-container{
-	margin: 100px auto;
-}
-
 .bootbox-container {
 	color: white;
 }

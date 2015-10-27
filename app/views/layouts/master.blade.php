@@ -4,14 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- <link href="/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet"> -->
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-    <script src='/js/jquery.tagsinput.min.js'></script>
-	<script src="/bootstrap/js/bootstrap.min.js"></script>
-	<script src="/js/bootbox.min.js"></script>
-
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap.css"/>
-	<link rel="stylesheet" type="text/css" href="/css/carousel.css"/>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="/css/jquery.tagsinput.css">
 	<link rel="stylesheet" type="text/css" href="/css/stylesheet.css">
@@ -108,6 +101,9 @@
 	{{ Session::forget('successMessage'); }}
     {{ Session::forget('errorMessage'); }}
 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src='/js/jquery.tagsinput.min.js'></script>
+	<script src="/bootstrap/js/bootstrap.min.js"></script>
 	@yield('bottom-script')
 </body>
 </html>
