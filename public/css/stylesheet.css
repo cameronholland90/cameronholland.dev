@@ -1,6 +1,27 @@
+@import url(https://fonts.googleapis.com/css?family=Architects+Daughter);
+@import url(https://fonts.googleapis.com/css?family=Slabo+27px|Ubuntu:400,700);
+
+* {
+	font-family: 'Slabo 27px', serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Ubuntu', sans-serif;
+}
+
+small {
+	margin-top: 4px;
+	font-family: 'Architects Daughter', cursive;
+}
+
 html,
 body {
-	background-image: url(/img/backgrounds/congruent_outline.png);
+	background-image: url(/img/backgrounds/footer_lodyas.png);
 }
 
 /*main page*/
@@ -14,7 +35,9 @@ body {
   padding: 15px;
   margin: 0 auto;
 }
-.form-signin .form-signin-heading,
+.form-signin-heading {
+	text-align: center;
+}
 .form-signin .checkbox {
   margin-bottom: 10px;
 }
@@ -46,9 +69,9 @@ body {
 
 .main-container {
 	color: #444;
-	background-image: url(/img/backgrounds/subtle_white_feathers.png); 
-	border-radius: 10px; 
-	padding: 50px; 
+	background-image: url(/img/backgrounds/greyzz.png);
+	border-radius: 10px;
+	padding: 50px;
 	margin-top: 100px;
 }
 
@@ -56,11 +79,15 @@ body {
 	color: white;
 }
 
-.main-container a {
+.main-container .contact-icons a,
+.main-container .post-title a {
 	color: #195062;
 }
+.main-container a {
+	color: #AE5C0A;
+}
 .main-container a:hover {
-	color: darkblue;
+	color: steelblue;
 }
 
 .contact-icons {
@@ -68,9 +95,9 @@ body {
 	font-size: 50px;
 	color: #195062;
 	-webkit-transition: all 200ms ease-in;
-    -webkit-transform: scale(1); 
+    -webkit-transform: scale(1);
     -ms-transition: all 200ms ease-in;
-    -ms-transform: scale(1); 
+    -ms-transform: scale(1);
     -moz-transition: all 200ms ease-in;
     -moz-transform: scale(1);
     /*transition: all 200ms ease-in;*/
@@ -78,11 +105,11 @@ body {
 }
 .contact-icons:hover {
 	font-size: 50px;
-	color: darkblue;
+	color: steelblue;
 	-webkit-transition: all 200ms ease-in;
     -webkit-transform: scale(1.5);
     -ms-transition: all 200ms ease-in;
-    -ms-transform: scale(1.5);   
+    -ms-transform: scale(1.5);
     -moz-transition: all 200ms ease-in;
     -moz-transform: scale(1.5);
     transition: all 200ms ease-in;
@@ -98,14 +125,38 @@ body {
 }
 
 a.btn-custom,
-button.btn-custom {
-	background-color: steelblue;
+button.btn-custom,
+input.btn-custom {
+	background-color: #195062;
 	color: #fff;
 }
 a.btn-custom:hover,
-button.btn-custom:hover {
-	background-color: darkblue;
+button.btn-custom:hover,
+input.btn-custom:hover {
+	background-color: steelblue;
 	color: #fff;
+}
+a.btn-navbar,
+input.btn-navbar,
+button.btn-navbar,
+a.btn-search,
+input.btn-search,
+button.btn-search {
+	background-color: #fff;
+	color: #195062;
+	border-color: #000;
+	height: 38px;
+}
+a.btn-navbar:hover,
+input.btn-navbar:hover,
+button.btn-navbar:hover,
+a.btn-search:hover,
+input.btn-search:hover,
+button.btn-search:hover {
+	background-color: #a2a2a2;
+	color: #fff;
+	border-color: #000;
+	height: 38px;
 }
 
 .page-header h1 {
@@ -139,12 +190,12 @@ button.btn-custom:hover {
 }
 
 /*blackjack*/
-.outline { 
-	width: 110px; 
+.outline {
+	width: 110px;
 	height: 154px;
-	text-align: center; 
-	padding: 10px; 
-	margin: 10px; 
+	text-align: center;
+	padding: 10px;
+	margin: 10px;
 	background: #FFF;
 	float: left;
 }
@@ -153,25 +204,25 @@ button.btn-custom:hover {
 	padding: 2px;
 }
 
-.top { 
+.top {
 	height: 30px;
-	text-align: left; 
+	text-align: left;
 }
 
-.bottom { 
-	text-align: right; 
+.bottom {
+	text-align: right;
 }
 
-.shadow { 
-	box-shadow: 4px 2px 3px #666; 
-	-moz-box-shadow: 4px 2px 3px #666; 
-	-webkit-box-shadow: 4px 2px 3px #666; 
+.shadow {
+	box-shadow: 4px 2px 3px #666;
+	-moz-box-shadow: 4px 2px 3px #666;
+	-webkit-box-shadow: 4px 2px 3px #666;
 }
 
-.rounded { 
-	border-radius:10px; 
-	-moz-border-radius:10px; 
-	-webkit-border-radius:10px; 
+.rounded {
+	border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
 }
 
 .overlay {
@@ -194,7 +245,7 @@ button.btn-custom:hover {
 	border-color: white;
 }
 .bootbox-inner-container {
-	background-color: #222; 
+	background-color: #222;
 }
 .modal-content {
 	background-image: url(/img/congruent_outline.png);
@@ -223,4 +274,44 @@ button.btn-custom:hover {
 	background-color: #555;
 	border: solid #000 2px;
 	display: inline-block;
+}
+.lrg-project-img {
+	display: inline-block;
+	padding: 5px;
+	background-color: #555;
+	border: solid #000 2px;
+}
+#disqus_thread {
+	background-color: #619CAE;
+	padding: 15px;
+	border-radius: 15px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.post-title {
+	margin-bottom: 30px;
+}
+.post {
+	border-bottom: 1px solid black;
+	padding-bottom: 30px;
+}
+.push-down {
+	margin-top: 15px;
+}
+ul.pagination li a,
+ul.pagination li.disabled span {
+	background-color: steelblue;
+	color: #fff;
+}
+ul.pagination li.active span {
+	background-color: #195162;
+}
+
+a.pdf-btn:hover {
+	background-color: red;
+}
+
+pre code {
+	white-space: nowrap;
+	overflow: scroll;
 }
