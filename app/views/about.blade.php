@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('tab-title')
+@section('top-script')
 	<title>About Me</title>
 @stop
 

@@ -1,26 +1,22 @@
 @extends('layouts.master')
 
-@section('tab-title')
+@section('top-script')
 	<title>Add Post Form</title>
-
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
 @stop
 
 @section('content')
 		@if ($edit)
-			<h1>Edit Post</h1>
+			<div class="page-header">
+				<h1>Edit Post</h1>
+			</div>
     		{{ Form::open(array('action' => array('PostsController@update', $post->id), 'class' => 'form-horizontal', 'method' => 'put', 'files' => true)) }}
     	@else
-			<h1>Create Post</h1>
+    		<div class="page-header">
+				<h1>Create Post</h1>
+			</div>
     		{{ Form::open(array('action' => 'PostsController@store', 'class' => 'form-horizontal', 'files' => true)) }}
     	@endif
-
-
-    	@if (Session::has('successMessage'))
-		    <div class="alert alert-success dif-col">{{{ Session::get('successMessage') }}}</div>
-		@endif
-		@if (Session::has('errorMessage'))
-		    <div class="alert alert-danger dif-col">{{{ Session::get('errorMessage') }}}</div>
-		@endif
 
     	<div class='form-group'>
     		{{ $errors->has('title') ? $errors->first('title', '<p><span class="help-block">:message</span></p>') : '' }}
@@ -38,18 +34,18 @@
 			{{ Form::label('body', 'Body', array('class' => 'col-sm-2 control-label')) }}
 			<div class='col-sm-10'>
 				@if ($edit)
-					{{ Form::textarea('body', $post->body, array('class' => 'form-control', 'placeholder' => 'Body')) }}
+					{{ Form::textarea('body', $post->body, array('class' => 'form-control simplemde', 'placeholder' => 'Body')) }}
 				@else
-					{{ Form::textarea('body', null, array('class' => 'form-control', 'placeholder' => 'Body')) }}
+					{{ Form::textarea('body', null, array('class' => 'form-control simplemde', 'placeholder' => 'Body')) }}
 				@endif
 			</div>
 		</div>
-		<div class='form-group'>
+		{{-- <div class='form-group'>
 			{{ Form::label('tags', 'Tags', array('class' => 'col-sm-2 control-label')) }}
 			<div class='col-sm-10'>
 				{{ Form::textarea('tags', null, array('class' => 'form-control', 'id' => 'tags')) }}
 			</div>
-		</div>
+		</div> --}}
 		<div class='form-group'>
 			{{ Form::label('image', 'Upload Image', array('class' => 'col-sm-2 control-label')) }}
 			<div class='col-sm-10')>
@@ -64,9 +60,12 @@
 @stop
 
 @section('bottom-script')
+	<script src="//cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
 	<script>
 		$('#tags').tagsInput();
+
+		var simplemde = new SimpleMDE({ element: $('.simplemde')[0] });
 	</script>
-    
+
 
 @stop

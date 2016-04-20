@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('tab-title')
+@section('top-script')
 	<link rel="stylesheet" type="text/css" href="/css/connect-four.css">
 @stop
 

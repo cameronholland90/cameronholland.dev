@@ -1,26 +1,23 @@
 @extends('layouts.master')
 
-@section('tab-title')
+@section('top-script')
 	<title>User Info</title>
 
 @stop
 
 @section('content')
+	<div class="row">
 		@if ($edit)
-			<h1>Update User Info</h1>
+			<div class="page-header text-center">
+				<h1>Update User Info</h1>
+			</div>
     		{{ Form::open(array('action' => array('UsersController@update', $user->id), 'class' => 'form-horizontal', 'method' => 'put', 'files' => true)) }}
     	@else
-    		<h1>Sign Up User</h1>
+    		<div class="page-header text-center">
+    			<h1>Sign Up User</h1>
+    		</div>
     		{{ Form::open(array('action' => 'UsersController@store', 'class' => 'form-horizontal', 'files' => true)) }}
     	@endif
-
-
-    	@if (Session::has('successMessage'))
-		    <div class="alert alert-success dif-col">{{{ Session::get('successMessage') }}}</div>
-		@endif
-		@if (Session::has('errorMessage'))
-		    <div class="alert alert-danger dif-col">{{{ Session::get('errorMessage') }}}</div>
-		@endif
 
     	<div class='form-group'>
     		{{ $errors->has('email') ? $errors->first('email', '<p><span class="help-block">:message</span></p>') : '' }}
@@ -101,10 +98,10 @@
 				@endif
 			</div>
 		</div>
-		<div class='col-sm-10'>
-			{{ Form::submit('Save User Info', array('class' => 'btn btn-default')); }}
+		<div class='col-sm-12 text-center'>
+			{{ Form::submit('Save User Info', array('class' => 'btn btn-custom')); }}
 		</div>
 		{{ Form::close() }}
-    
+	</div>
 
 @stop

@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('tab-title')
+@section('top-script')
 	<title>Projects - Blackjack</title>
 	<link href='https://fonts.googleapis.com/css?family=Black+Ops+One' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="/css/blackjack.css">
@@ -57,7 +57,7 @@
 		</div>
 	</div>
 	<div class="row">
-		
+
 		<div id="game-options" class="text-center">
 			<button class="btn btn-success" id="start">Start Game</button>
 			<button class="btn btn-success" id="deal">Deal Game</button>

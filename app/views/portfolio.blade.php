@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('tab-title')
+@section('top-script')
 	<title>Portfolio</title>
 
 @stop
@@ -11,39 +11,37 @@
 		</div>
 		<div class='row'>
 			<div class='col-md-6'>
-				<img class='img-responsive' alt="Lead Propeller Web App" src="/img/portfolio/leadpropeller.png" style="display: inline-block; padding: 5px; background-color: #555; border: solid #000 2px;" />
+				<img class='lrg-project-img img-responsive' alt="Westmoreland Builders Web App" src="/img/portfolio/westmoreland.png" />
 			</div>
-			<div class='col-md-6' style='vertical-align: center;'>
-				<h3><strong>LEAD PROPELLER</strong></h3>
-				<p>Website editor made using the LAMP+J stack. Primarily targeted towards Real Estate Investors or House Flippers.</p>
-				<a href="http://leadpropeller.com" class="btn btn-custom btn-md" role="button">Lead Propeller</a>
+			<div class='col-md-6'>
+				<h3><strong>WESTMORELAND BUILDERS</strong></h3>
+				<p>Company website made using the LAMP+J stack. Built to allow Westmoreland Builders to display their current projects and customers to any visitors. Enables them to add projects, offices or customers as more are gained and modify content on the home page. Built while contracting with <a href="http://theformu.la/">The Formula Idea Works</a>.</p>
+				<a href="http://westmoreland.theformu.la" class="btn btn-custom btn-md">Westmoreland Builders</a>
 			</div>
 		</div>
 		<hr>
 		<div class='row'>
 			<div class='col-md-3'>
-				<img class='small-project-img img-responsive' src="/img/portfolio/blackjack-js.png" alt='Blackjack Web App in Javascript'>
+				<img class='small-project-img img-responsive' alt="Lead Propeller Web App" src="/img/portfolio/leadpropeller.png" />
 			</div>
 			<div class='col-md-9'>
-				<h4><strong>BLACKJACK IN JS</strong></h4>
-				<h5>or 21</h5>
-				<p>Web application for the card game Blackjack written in javascript. Modified from php version listed below.</p>
-				<a href="{{ action('ProjectsController@getBlackjack') }}" class='btn btn-custom btn-sm'>Blackjack in JS</a>
+				<h3><strong>LEAD PROPELLER</strong></h3>
+				<p>Website editor made using the LAMP+J stack. Primarily targeted towards Real Estate Investors or House Flippers.</p>
+				<a href="http://leadpropeller.com" class="btn btn-custom btn-md">Lead Propeller</a>
 			</div>
 		</div>
 		<br>
 		<div class='row'>
 			<div class='col-md-3'>
-				<img class='small-project-img img-responsive' src="/img/portfolio/blackjack-php.png" alt='Blackjack Web App in PHP'>
+				<img class='small-project-img img-responsive' src="/img/portfolio/blackjack.png" alt='Blackjack Web App in Javascript'>
 			</div>
 			<div class='col-md-9'>
-				<h4><strong>BLACKJACK IN PHP</strong></h4>
-				<h5>or 21</h5>
-				<p>Web application for the card game Blackjack written in php during my enrollment in Codeup's LAMP+J Bootcamp</p>
-				<a href="/blackjack.php" class='btn btn-custom btn-sm'>Blackjack in PHP</a>
+				<h4><strong>BLACKJACK</strong></h4>
+				<p>Web application for the card game Blackjack written in javascript.</p>
+				<a href="{{ action('ProjectsController@getBlackjack') }}" class='btn btn-custom btn-sm'>Blackjack</a>
 			</div>
 		</div>
-		<br>
+		{{-- <br>
 		<div class='row'>
 			<div class='col-md-3'>
 				<img class='small-project-img img-responsive' src="/img/portfolio/connect-four.png" alt='Connect Four Web App'>
@@ -64,7 +62,7 @@
 				<p>Web application for the dice game Yahtzee written in php during my enrollment in Codeup's LAMP+J Bootcamp</p>
 				<a href="/yahtzee.php" class='btn btn-custom btn-sm'>Yahtzee</a>
 			</div>
-		</div>
+		</div> --}}
 		<br>
 		<div class='row'>
 			<div class='col-md-3'>
@@ -73,7 +71,7 @@
 			<div class='col-md-9'>
 				<h4><strong>WHACK A MOLE</strong></h4>
 				<p>Web application for the game Whack-a-Mole. Made with Javascript and using a Hanna-Barbera theme</p>
-				<a href="/whack-a-mole.html" class='btn btn-custom btn-sm'>Whack-a-Mole</a>
+				<a href="{{ action('ProjectsController@getWhackAMole') }}" class='btn btn-custom btn-sm'>Whack-a-Mole</a>
 			</div>
 		</div>
 		<br>
@@ -83,8 +81,8 @@
 			</div>
 			<div class='col-md-9'>
 				<h4><strong>HYPNOTOAD SAYS</strong></h4>
-				<p>Web application for the game simple simon. Made with Javascript and using a Futurama theme</p>
-				<a href="/simon-says.html" class='btn btn-custom btn-sm'>Hypnotoad Says</a>
+				<p>Web application for the game simple simon. Made with Javascript and using a Futurama theme. Not mobile responsive yet.</p>
+				<a href="{{ action('ProjectsController@getHypnotoad') }}" class='btn btn-custom btn-sm'>Hypnotoad Says</a>
 			</div>
 		</div>
 		<br>

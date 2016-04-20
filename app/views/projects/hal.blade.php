@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('tab-title')
+@section('top-script')
 	<title>Projects - Blackjack</title>
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="/css/hal.css">

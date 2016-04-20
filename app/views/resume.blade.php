@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('tab-title')
+@section('top-script')
 	<title>Resume</title>
 
 @stop
@@ -23,7 +23,8 @@
 			<div class="row">
 				<div class='col-md-4 text-center'>
 					<div class="contact-icons">
-						<a href="mailto:cameron@thenearsky.com"><i class="fa fa-envelope"></i></a>
+						{{-- had to echo out with blade syntax to not have syntax highlighting issue(needs to be removed when done editing) --}}
+						<a href="mailto:cameron{{{ '@' }}}thenearsky.com"><i class="fa fa-envelope"></i></a>
 					</div>
 				</div>
 				<div class='col-md-4 text-center'>
@@ -56,6 +57,18 @@
 				</div>
 				<div class='col-md-3'>
 					<p class="start-end-date">Setember 2015 - Present</p>
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div class="col-md-11 col-md-offset-1">
+					<h3><span>The Formula Idea Works</span> <small>San Antonio, TX</small></h3>
+				</div>
+				<div class='col-md-8 col-md-offset-1'>
+					<p>Contracted to work on project for <a href="http://westmoreland.theformu.la">Westmoreland Builders</a>. Developed Westmoreland's Company Website with the LAMP+J stack. The site was made to allow easy addition and displaying of current projects and offices. Also enabled them to modify content on their home page through the admin backend.</p>
+				</div>
+				<div class='col-md-3'>
+					<p class="start-end-date">February 2016 - April 2016</p>
 				</div>
 			</div>
 			<br>
@@ -138,10 +151,10 @@
 				</div>
 			</div>
 			<div class="row text-center">
-				<a href="/downloads/resume.pdf" class="btn btn-custom"><i class="fa fa-file-pdf-o"></i> Download PDF</a>
+				<a href="/downloads/resume.pdf" class="btn btn-custom pdf-btn"><i class="fa fa-file-pdf-o"></i> Download PDF</a>
 			</div>
 		</div>
 	</div>
-	
-	
+
+
 @stop

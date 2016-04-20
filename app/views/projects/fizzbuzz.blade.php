@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('tab-title')
+@section('top-script')
 	<title>Projects - FizzBuzz Without Loops</title>
 @stop
 
