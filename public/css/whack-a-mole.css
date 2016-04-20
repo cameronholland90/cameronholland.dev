@@ -30,3 +30,7 @@ body {
 .whack-container{
 	margin: 100px auto;
 }
+
+.main-container {
+	background-image: none;
+}

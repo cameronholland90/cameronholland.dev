@@ -37,7 +37,7 @@ $(document).ready(function() {
 
 		time_shown: 				1000,
 
-		setupDifficultys: function() 
+		setupDifficultys: function()
 		{
 
 			this.easy = [13, 14, 15, 16, 17, 18, 19, 20, 21, 22];
@@ -65,7 +65,7 @@ $(document).ready(function() {
 			this.difficulty_buttons.on('click', function() {
 				$('.difficulty.active').removeClass('active');
 				$(this).addClass('active');
-				if ( $(this).data('difficulty') == 'hard' ) 
+				if ( $(this).data('difficulty') == 'hard' )
 				{
 
 					hal.difficult_audio.play();
@@ -73,7 +73,7 @@ $(document).ready(function() {
 			})
 		},
 
-		initializeBoard: function() 
+		initializeBoard: function()
 		{
 
 			this.setupDifficultys();
@@ -100,7 +100,7 @@ $(document).ready(function() {
 			})
 		},
 
-		startGame: function() 
+		startGame: function()
 		{
 
 			hal.answerSequence = [];
@@ -127,9 +127,9 @@ $(document).ready(function() {
 		},
 
 		newLevel: function(){
-			
+
 			this.turn = 0;
-			
+
 			this.addToSequence(); //randomize memory core with the correct amount of numbers for this level
 			this.displaySequence(); //show the user the sequence
 		},
@@ -164,7 +164,7 @@ $(document).ready(function() {
 
 			this.memory_cores.click(function() {
 
-				if (hal.userInputActive) 
+				if (hal.userInputActive)
 				{
 
 					hal.beep_audio.play();
@@ -174,7 +174,7 @@ $(document).ready(function() {
 			});
 		},
 
-		getRandomProgressSound: function() 
+		getRandomProgressSound: function()
 		{
 
 			var random_number = Math.floor(Math.random() * (this.progress_sounds.length - 1));
@@ -182,12 +182,12 @@ $(document).ready(function() {
 		},
 
 		checkSequence: function(memory_core)
-		{			
+		{
 
 			//checker function to test if the memory core the user pressed was next in the sequence
 			if(memory_core !== this.answerSequence[this.turn])
-			{	
-					
+			{
+
 				this.incorrectSequence();
 			}
 			else
@@ -199,13 +199,13 @@ $(document).ready(function() {
 			}
 
 			if(this.turn === this.answerSequence.length)
-			{	
+			{
 
 				if (this.turn % 5 == 0) {
 					var random_sound = this.getRandomProgressSound();
 					random_sound.play();
 				};
-				
+
 				//if completed the whole sequence
 				this.level++;							//increment level, display it, disable the memory cores wait 1 second and then reset the game
 				this.updateLevel();
@@ -229,12 +229,12 @@ $(document).ready(function() {
 				}, 50).animate({
 
 					opacity: '.3'
-				}, hal.time_shown);	
+				}, hal.time_shown);
 
 				times_repeat--;
 			}
 
-			if (times_repeat > 0) 
+			if (times_repeat > 0)
 			{
 
 				hal.lightupSection( memory_core_number, times_repeat );
@@ -252,11 +252,11 @@ $(document).ready(function() {
 		},
 
 		incorrectSequence: function()
-		{						
+		{
 
 			var correct_core = this.answerSequence[this.turn];
 			this.game_over = true;
-			
+
 			this.userInputActive = false;
 			this.updateLevel();
 			this.updateScore();
@@ -279,9 +279,9 @@ $(document).ready(function() {
 		    this.breath_audio.currentTime = 0;
 		},
 
-		addToSequence: function() 
-		{			
-	
+		addToSequence: function()
+		{
+
 			//generate random numbers and push them to the generated number array iterations determined by current level
 			var addnum = hal.spaces_used[ Math.floor(Math.random() * this.spaces_used.length) ];
 			this.answerSequence.push( addnum );
