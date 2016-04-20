@@ -54,10 +54,10 @@ return array(
 
 		'mysql' => array(
 		    'driver'    => 'mysql',
-		    'host'      => isset($_SERVER['DB1_HOST']) ? $_SERVER['DB1_HOST'] : 'localhost',
-		    'database'  => isset($_SERVER['DB1_NAME']) ? $_SERVER['DB1_NAME'] : 'blog_db',
-		    'username'  => isset($_SERVER['DB1_USER']) ? $_SERVER['DB1_USER'] : 'codeup',
-		    'password'  => isset($_SERVER['DB1_PASS']) ? $_SERVER['DB1_PASS'] : 'password',
+		    'host'      => $_ENV['DB_HOST'],
+		    'database'  => $_ENV['DB_NAME'],
+		    'username'  => $_ENV['DB_USER'],
+		    'password'  => $_ENV['DB_PASS'],
 		    'charset'   => 'utf8',
 		    'collation' => 'utf8_unicode_ci',
 		    'prefix'    => '',
