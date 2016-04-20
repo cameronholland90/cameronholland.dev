@@ -21,6 +21,18 @@ class ProjectsController extends \BaseController {
 	}
 
 
+	public function getHypnotoad()
+	{
+		return View::make('projects.hypnotoad');
+	}
+
+
+	public function getWhackAMole()
+	{
+		return View::make('projects.whackamole');
+	}
+
+
 	public function getFizzBuzzNoLoops()
 	{
 		return View::make('projects.fizzbuzz');

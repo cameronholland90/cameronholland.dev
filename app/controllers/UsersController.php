@@ -51,7 +51,7 @@ class UsersController extends \BaseController {
 	 * @return Response
 	 */
 	public function create() {
-		return View::make('users.user_edit')->with('edit', false);
+		return View::make('users.edit')->with('edit', false);
 	}
 
 	/**
@@ -69,8 +69,8 @@ class UsersController extends \BaseController {
 	    {
 	        // validation failed, redirect to the post create page with validation errors and old inputs
 	        return Redirect::back()->withInput()->withErrors($validator);
-	    } 
-		
+	    }
+
 		if (Input::get('password') === Input::get('password2')) {
 			$user->password = Input::get('password');
 		} else {
@@ -94,7 +94,7 @@ class UsersController extends \BaseController {
 	 */
 	public function edit($id) {
 		$user = User::find($id);
-		return View::make('users.user_edit')->with(array('user' => $user, 'edit' => true));
+		return View::make('users.edit')->with(array('user' => $user, 'edit' => true));
 	}
 
 		/**
@@ -157,15 +157,15 @@ class UsersController extends \BaseController {
 									->orWhere('username', 'LIKE', "%$search%")
 									->orWhere('email', 'LIKE', "%$search%");
 				            })
-						->orderBy('created_at', 'desc')->paginate(15);				
+						->orderBy('created_at', 'desc')->paginate(15);
 		}
 
 		foreach ($data as $user) {
 			if ($user->role == 'Admin') {
-				unset($data[$user->id]);			
+				unset($data[$user->id]);
 			}
 		}
-		return View::make('users.index_user')->with('users', $data);
+		return View::make('users.index')->with('users', $data);
 	}
 
 	/**

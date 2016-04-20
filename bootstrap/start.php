@@ -24,12 +24,10 @@ $app = new Illuminate\Foundation\Application;
 |
 */
 
-$env = $app->detectEnvironment(array(
-
-	'local' => array('your-machine-name'),
-	'production' => array('tunne.pagodabox.com')
-
-));
+$env = $app->detectEnvironment(function()
+{
+    return isset($_SERVER['LARAVEL_ENV']) ? $_SERVER['LARAVEL_ENV'] : 'production';
+});
 
 /*
 |--------------------------------------------------------------------------
