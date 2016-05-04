@@ -9,7 +9,7 @@
 	<div id="resume">
 		<div class="page-header">
 			<h1>
-				<img src="/img/Arches v2-6.jpg" alt="Head Shot" class="img-circle resume-profile">
+				<img src="/img/Cameron.jpg" alt="Head Shot" class="img-circle resume-profile">
 				Cameron Holland <small>Software Developer</small>
 			</h1>
 		</div>
