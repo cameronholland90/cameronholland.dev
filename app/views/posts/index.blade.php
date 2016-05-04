@@ -20,7 +20,7 @@
                         <img src="{{ $post->image_location }}" class="img-responsive center-block" />
                     </div>
                     <div class="col-md-9">
-            		  {{ Markdown::string(Str::words($post->body, 140)) }}
+            		  {{ Markdown::string(Str::words($post->body, 120)) }}
                     </div>
                 </div>
             </div>

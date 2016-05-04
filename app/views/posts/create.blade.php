@@ -53,7 +53,7 @@
 			</div>
 		</div>
 		<div class='col-sm-10'>
-			{{ Form::submit('Save Post', array('class' => 'btn btn-default')); }}
+			{{ Form::submit('Save Post', array('class' => 'btn btn-primary')); }}
 		</div>
 		{{ Form::close() }}
 
