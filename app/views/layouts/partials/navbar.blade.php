@@ -1,4 +1,4 @@
-<div id="navbar" class="navbar navbar-inverse navbar-fixed-top">
+<nav id="navbar" class="navbar navbar-inverse navbar-fixed-top">
 	<div class="container">
 		<div class="row">
 			<div class="navbar-header">
@@ -74,4 +74,4 @@
 			</div>
 		</div>
 	</div>
-</div>
+</nav>

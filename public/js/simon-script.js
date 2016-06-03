@@ -8,7 +8,7 @@ var game={ //game object
 	shape: '.shape', // cached string for the pad class
 	genSequence: [], //array containing the generated/randomized pads
 	plaSequence: [], //array containing the users pad selections
-	
+
 	init: function(){					//initialises the game
 		if(this.handler === false){		//checks to see if handlers are already active
 			this.initPadHandler();		//if not activate them
@@ -26,7 +26,7 @@ var game={ //game object
 			if(that.active===true){
 
 				var pad=parseInt($(this).data('pad'),10);
-					
+
 				that.flash($(this),1,300, pad);
 
 				that.logPlayerSequence(pad);
@@ -50,17 +50,17 @@ var game={ //game object
 	},
 
 	newLevel: function(){
-		
+
 		this.plaSequence.length=0;
 		this.pos=0;
 		this.turn=0;
 		this.active=true;
-		
+
 		this.randomizePad(); //randomize pad with the correct amount of numbers for this level
 		this.displaySequence(); //show the user the sequence
 
 	},
-	
+
 	flash: function(element, times, speed, pad){ //function to make the pads appear to flash
 
 		var that = this;						//cache this
@@ -77,7 +77,7 @@ var game={ //game object
 
 		}
 
-		if (times > 0) {									//call the flash function again until done the correct amount of times 
+		if (times > 0) {									//call the flash function again until done the correct amount of times
 			setTimeout(function () {
 				that.flash(element, times, speed, pad);
 			}, speed);
@@ -97,7 +97,7 @@ var game={ //game object
 	},
 
 	randomizePad: function(){			//generate random numbers and push them to the generated number array iterations determined by current level
-	
+
 		this.genSequence.push(Math.floor(Math.random() * 4) + 1);
 	},
 
@@ -105,16 +105,16 @@ var game={ //game object
 
 		this.plaSequence.push(pad);
 		this.checkSequence(pad);
-		
-	
+
+
 	},
 
 	checkSequence: function(pad){			//checker function to test if the pad the user pressed was next in the sequence
 
 		that=this;
 
-		if(pad !== this.genSequence[this.turn]){	//if not correct 
-				
+		if(pad !== this.genSequence[this.turn]){	//if not correct
+
 				this.incorrectSequence();
 
 			}else{									//if correct
@@ -124,7 +124,7 @@ var game={ //game object
 			}
 
 		if(this.turn === this.genSequence.length){	//if completed the whole sequence
-			
+
 			this.level++;							//increment level, display it, disable the pads wait 1 second and then reset the game
 			this.displayLevel();
 			this.active=false;
@@ -135,21 +135,21 @@ var game={ //game object
 	},
 
 	displaySequence: function(){					//display the generated sequence to the user
-		
+
 		var that=this;
 
 		$.each(this.genSequence, function(index, val) {		//iterate over each value in the generated array
-			
+
 			setTimeout(function(){
-				
+
 				that.flash($(that.shape+val),1,300,val);
-			
+
 			},500*index*that.difficulty);				// multiply timeout by how many items in the array so that they play sequentially and multiply by the difficulty modifier
 		});
 	},
 
 	displayLevel: function(){							//just display the current level on screen
-		
+
 		$('.level h2').text('Level: '+this.level);
 
 	},
@@ -159,7 +159,7 @@ var game={ //game object
 	},
 
 	keepScore: function(){								//keep the score
-		
+
 		var multiplier=0;
 
 		switch(this.difficulty)							//choose points modifier based on difficulty
@@ -167,7 +167,7 @@ var game={ //game object
 			case '2':
 				multiplier=1;
 				break;
-			
+
 			case '1':
 				multiplier=2;
 				break;
@@ -189,7 +189,7 @@ var game={ //game object
 	incorrectSequence: function(){						//if user makes a mistake
 
 		var corPad = this.genSequence[this.turn],		//cache the pad number that should have been pressed
-			
+
 			that = this;
 			this.active=false;
 			this.displayLevel();
@@ -206,7 +206,6 @@ var game={ //game object
 
 };
 $(document).ready(function(){							//document ready
-
 	$('.start').click(function(){				//initialise a game when the start button is clicked
 		$(this).hide();
 		game.difficulty = $('input[name=difficulty]:checked').val();
@@ -216,5 +215,4 @@ $(document).ready(function(){							//document ready
 
 	});
 
-	
 });

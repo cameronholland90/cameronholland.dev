@@ -14,6 +14,5 @@
 		<li>Betting(fake money)</li>
 		<li>Split</li>
 		<li>Double Down</li>
-		<li>Insurance</li>
 	</ul>
 @stop

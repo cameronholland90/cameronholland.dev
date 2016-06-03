@@ -153,7 +153,7 @@ button.btn-navbar:hover,
 a.btn-search:hover,
 input.btn-search:hover,
 button.btn-search:hover {
-	background-color: #a2a2a2;
+	background-color: #d4d4d4;
 	color: #fff;
 	border-color: #000;
 	height: 34px;
@@ -162,7 +162,14 @@ button.btn-search:hover {
 a.btn-default,
 input.btn-default,
 button.btn-default {
-	background-color: #555555;
+	background-color: #000000;
+	color: #ffffff;
+}
+a.btn-default:hover,
+input.btn-default:hover,
+button.btn-default:hover {
+	background-color: #ffffff;
+	color: #000000;
 }
 
 .page-header h1 {
@@ -259,12 +266,12 @@ button.btn-default {
 	background-color: #222;
 }
 .modal-content {
-	background-image: url(/img/congruent_outline.png);
+	background-image: url(/img/backgrounds/footer_lodyas.png);
 }
 
 .nav .caret {
-	border-top-color: #A2A2A2;
-	border-bottom-color: #A2A2A2;
+	border-top-color: #d4d4d4;
+	border-bottom-color: #d4d4d4;
 }
 
 .navbar {
@@ -275,7 +282,7 @@ button.btn-default {
 }
 .dropdown-menu>li>a,
 .navbar-inverse .navbar-nav > li > a {
-	color: #A2A2A2;
+	color: #d4d4d4;
 }
 .dropdown-menu {
 	background-color: #195062;
@@ -346,4 +353,20 @@ pre code {
     background: white;
     cursor: inherit;
     display: block;
+}
+.navbar-inverse a.navbar-brand {
+	color: #ffffff;
+}
+nav.navbar-inverse .navbar-nav > li.open,
+nav.navbar-inverse .navbar-nav > li.open:hover,
+nav.navbar-inverse .navbar-nav > li.open:focus,
+nav.navbar-inverse .navbar-nav > li.active {
+	background-color: #123C48;
+}
+nav.navbar-inverse .navbar-nav > li.open > a,
+nav.navbar-inverse .navbar-nav > li.open:hover > a,
+nav.navbar-inverse .navbar-nav > li.open:focus > a,
+nav.navbar-inverse .navbar-nav > li.open > a:focus,
+nav.navbar-inverse .navbar-nav > li.active > a {
+	background-color: transparent;
 }

@@ -1,5 +1,5 @@
 (function () {
-	
+
 	// hide game to wait for user to start
 	$('#game-board').hide();
 	$('#extra-hands').hide();
@@ -32,7 +32,7 @@
 	var hands_done = [];
 
 	// shows hands and hides start game button
-	function showBoard() 
+	function showBoard()
 	{
 
 		$('#game-board').show();
@@ -53,7 +53,7 @@
 
 		deck_back++;
 
-		if (deck_back > deck_back_options.length - 1) 
+		if (deck_back > deck_back_options.length - 1)
 		{
 
 			deck_back = 0;
@@ -79,13 +79,13 @@
 		deck = [];
 
 		// loops through all suits
-		for (var suit_key = 0; suit_key < suits.length; suit_key++) 
+		for (var suit_key = 0; suit_key < suits.length; suit_key++)
 		{
 
 			// loops through all values
-			for (var value_key = 0; value_key < values.length; value_key++) 
+			for (var value_key = 0; value_key < values.length; value_key++)
 			{
-				
+
 				// makes card object to be used for calculating hand score
 				var card = {
 					value: values[ value_key ],
@@ -105,7 +105,7 @@
 	function clearHands()
 	{
 
-		for (var hand_key = hands.length - 1; hand_key >= 0; hand_key--) 
+		for (var hand_key = hands.length - 1; hand_key >= 0; hand_key--)
 		{
 
 			hands[hand_key] = [];
@@ -138,7 +138,7 @@
 		var card1 = hands[player_hand_key][0];
 		var card2 = hands[player_hand_key][1];
 
-		if ( getCardValueInt( card1 ) == getCardValueInt( card2 ) ) 
+		if ( getCardValueInt( card1 ) == getCardValueInt( card2 ) )
 		{
 
 			$('.split').show();
@@ -160,7 +160,7 @@
 		var ace_count = 0;
 
 		// goes through hand and counts the aces
-		for (var card_key = hands[ dealer_hand_key ].length - 1; card_key >= 0; card_key--) 
+		for (var card_key = hands[ dealer_hand_key ].length - 1; card_key >= 0; card_key--)
 		{
 
 			if ( hands[ dealer_hand_key ][card_key]['value'] == 'A' )
@@ -170,9 +170,9 @@
 			}
 		};
 
-		// if only once ace is found, it is a soft seventeen
+		// if only one ace is found, it is a soft seventeen
 		// function only called when hand score equals 17
-		if (ace_count == 1) 
+		if (ace_count == 1)
 		{
 
 			return true;
@@ -185,11 +185,11 @@
 	function shuffleDeck()
 	{
 
-	  	var i = 0, 
+	  	var i = 0,
 	  		j = 0,
 	  		temp = null;
 
-	  	for (i = deck.length - 1; i > 0; i -= 1) 
+	  	for (i = deck.length - 1; i > 0; i -= 1)
 	  	{
 
 	    	j = Math.floor(Math.random() * (i + 1))
@@ -208,7 +208,7 @@
 		$.ajax({
 	        type: "GET",
 	        url: "/ajax/blackjack-deck",
-	        data: { 
+	        data: {
 	        	deck_count	: deck.length,
 	        	card_back 	: deck_back_options[deck_back]
 	        }
@@ -222,7 +222,7 @@
 	function checkForBust(hand_key)
 	{
 
-		if ( getHandScore( hand_key ) > blackjack_score ) 
+		if ( getHandScore( hand_key ) > blackjack_score )
 		{
 
 			return true;
@@ -234,7 +234,7 @@
 		}
 	}
 
-	// checks to see if player got blackjack, 
+	// checks to see if player got blackjack,
 	// only if true checks dealer hand for blackjack
 	// if dealer has blackjack dealer wins
 	// if only player has blackjack player wins
@@ -245,7 +245,7 @@
 		var player_blackjack = false;
 		var dealer_blackjack = false;
 
-		for (var hand_key = hands.length - 1; hand_key >= 0; hand_key--) 
+		for (var hand_key = hands.length - 1; hand_key >= 0; hand_key--)
 		{
 
 			if ( getHandScore( hand_key ) == blackjack_score && hand_key == dealer_hand_key )
@@ -253,19 +253,19 @@
 
 				dealer_blackjack = true;
 			}
-			else if ( getHandScore( hand_key ) == blackjack_score ) 
+			else if ( getHandScore( hand_key ) == blackjack_score )
 			{
 
 				player_blackjack = true;
-			} 
+			}
 		};
 
-		if ( player_blackjack && dealer_blackjack ) 
+		if ( player_blackjack && dealer_blackjack )
 		{
 
 			endGame( 'Dealer Wins With Blackjack', false );
 		}
-		else if ( player_blackjack ) 
+		else if ( player_blackjack )
 		{
 
 			endGame( 'Player Wins With Blackjack', true );
@@ -275,7 +275,7 @@
 	function checkForPlayerTurnEnd()
 	{
 
-		if ( ( hands_done.indexOf( player_hand_key ) != -1 ) && ( ( hands_done.indexOf( player_extra_hand_keys[0] ) != -1 ) || player_extra_hand_keys.length == 0 ) ) 
+		if ( ( hands_done.indexOf( player_hand_key ) != -1 ) && ( hands_done.indexOf( player_extra_hand_keys[0] ) != -1  || player_extra_hand_keys.length == 0 ) )
 		{
 
 			return true;
@@ -291,26 +291,26 @@
 		var card_score;
 
 		// all face cards equal 10, aces equal 11 or 1 and the rest are their number value
-		if ( card['value'] == 'J' || card['value'] == 'Q' || card['value'] == 'K' ) 
+		if ( card['value'] == 'J' || card['value'] == 'Q' || card['value'] == 'K' )
 		{
 
 			card_score = 10;
-		} 
-		else if (  card['value'] == 'A' ) 
+		}
+		else if (  card['value'] == 'A' )
 		{
 
-			if ( hand_score > 10 ) 
+			if ( hand_score > 10 )
 			{
 
 				card_score = 1;
-			} 
-			else 
+			}
+			else
 			{
 
 				card_score = 11;
 			};
-		} 
-		else 
+		}
+		else
 		{
 
 			card_score = parseInt(card['value']);
@@ -326,11 +326,11 @@
 		var card_score = 0;
 		var full_ace_count = 0;
 
-		for (var i = hands[hand_key].length - 1; i >= 0; i--) 
+		for (var i = hands[hand_key].length - 1; i >= 0; i--)
 		{
 
 			card_score = getCardValueInt( hands[hand_key][i], hand_score );
-			if ( card_score == 11 ) 
+			if ( card_score == 11 )
 			{
 
 				full_ace_count++;
@@ -338,7 +338,7 @@
 			hand_score += card_score;
 		};
 
-		if ( hand_score > blackjack_score && full_ace_count != 0 ) 
+		if ( hand_score > blackjack_score && full_ace_count != 0 )
 		{
 
 			hand_score = hand_score - ( full_ace_count * 10 );
@@ -350,10 +350,10 @@
 	// updates the score displayed for a hand(?? if dealer)
 	function updateHandScore(hand_key, hidden)
 	{
-		
+
 		var hand_score = getHandScore( hand_key );
 
-		if ( hidden ) 
+		if ( hidden )
 		{
 
 			hand_score = '??';
@@ -364,13 +364,13 @@
 	}
 
 	// updates the html for a hand
-	function displayHand(hand_key, hide_card) 
+	function displayHand(hand_key, hide_card)
 	{
 
 		$.ajax({
 	        type: "GET",
 	        url: "/ajax/blackjack-card",
-	        data: { 
+	        data: {
 	        	hand 		: hands[hand_key],
 	        	hide_card 	: hide_card,
 	        	card_back 	: deck_back_options[deck_back]
@@ -385,7 +385,7 @@
 	function displayHands()
 	{
 
-		for (var hand_key = hands.length - 1; hand_key >= 0; hand_key--) 
+		for (var hand_key = hands.length - 1; hand_key >= 0; hand_key--)
 		{
 
 			var hide_card = ((hand_key == dealer_hand_key)? true : false);
@@ -411,11 +411,11 @@
 		showBoard();
 
 		// loops through twice so each player gets 2 cards
-		for (var i = 1; i <= 2; i++) 
+		for (var i = 1; i <= 2; i++)
 		{
 
 			// goes through each hand and calls deal card function for that hand
-			for (var hand_key = 0; hand_key < hands.length; hand_key++) 
+			for (var hand_key = 0; hand_key < hands.length; hand_key++)
 			{
 
 				dealCard( hand_key );
@@ -436,11 +436,11 @@
 		removeAlert();
 
 		// checks to see if a new deck is needed
-		if ( deck.length < deck_limit ) 
+		if ( deck.length < deck_limit )
 		{
 
 			// calls make deck function that also shuffles the deck
-			makeDeck();	
+			makeDeck();
 		};
 
 		// sets up the game
@@ -460,14 +460,14 @@
 	// runs end game functions to show message and reveal dealer hand
 	function endGame(message, player_won)
 	{
-		
+
 		var alert_type;
-		if ( ! player_won ) 
+		if ( ! player_won )
 		{
 
 			alert_type = 'danger';
 			loses++;
-		} 
+		}
 		else
 		{
 
@@ -478,7 +478,7 @@
 		$.ajax({
 	        type: "GET",
 	        url: "/ajax/alert-message",
-	        data: { 
+	        data: {
 	        	alert_message	: message,
 	        	alert_type		: alert_type
 	        }
@@ -501,10 +501,12 @@
 		var hand_score;
 		var player_hand_score = getHandScore( player_hand_key );
 		var stay = false;
+		var loop_count = 0;
 
 		while ( true )
 		{
-
+			loop_count++;
+			console.log(loop_count);
 			hand_score = getHandScore( dealer_hand_key );
 
 			if ( hand_score > blackjack_score )
@@ -525,22 +527,22 @@
 				endGame( 'Dealer Wins.', false );
 				break;
 			}
-			else if ( hand_score == 17 && checkForSoftSeventeen() ) 
-			{
-
-				dealCard( dealer_hand_key );
-			}
-			else if ( hand_score < 17 ) 
-			{
-
-				dealCard( dealer_hand_key );
-			}
-			else if ( hand_score == player_hand_score ) 
+			else if ( hand_score == player_hand_score )
 			{
 
 				endGame( 'Dealer Wins.', false );
 			}
-			else 
+			else if ( hand_score == 17 && checkForSoftSeventeen() )
+			{
+
+				dealCard( dealer_hand_key );
+			}
+			else if ( hand_score < 17 )
+			{
+
+				dealCard( dealer_hand_key );
+			}
+			else
 			{
 
 				endGame( 'Player Wins.', true );
@@ -564,7 +566,7 @@
 
 		var bust = checkForBust( hand_key );
 
-		if ( bust ) 
+		if ( bust )
 		{
 
 			// busted_hands.push( hand_key );
@@ -577,7 +579,7 @@
 		hands_done.push( hand_key );
 		$(this).hide();
 
-		if ( checkForPlayerTurnEnd() ) 
+		if ( checkForPlayerTurnEnd() )
 		{
 
 			runDealerTurn();

@@ -69,5 +69,6 @@
 
 @section('bottom-script')
 	<script type="text/javascript" src="/js/blackjack.js"></script>
+	<script src="/js/bootbox.min.js"></script>
 	<script src="/js/popup-buttons.js"></script>
 @stop
