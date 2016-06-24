@@ -56,7 +56,7 @@
 					<p>Instructor for the LAMP+J stack bootcamp. Responsibilities included lecturing, one on one help with students, working on curriculum and helping students through their final projects.</p>
 				</div>
 				<div class='col-md-3'>
-					<p class="start-end-date">Setember 2015 - Present</p>
+					<p class="start-end-date">September 2015 - Present</p>
 				</div>
 			</div>
 			<br>
